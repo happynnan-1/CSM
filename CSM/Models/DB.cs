@@ -24,7 +24,7 @@ namespace CSM.Models
         /// <param name="where"></param>
         /// <returns></returns>
 
-        public virtual IEnumerable<T> all<T>() where T : class   
+        public virtual IEnumerable<T> all<T>() where T : class
         {
             //sql = "select * from " + tableName;
             return sqlHelper.QueryAll<T>(true);
@@ -56,13 +56,15 @@ namespace CSM.Models
         /// <summary>
         /// 根据where条件查询实体集合
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">类型文件</typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public virtual IEnumerable<T> where<T>(string where) where T : class
+        public virtual IEnumerable<T> Search<T>(Func<T, bool> wherelamda) where T : class
         {
-            sql = "select * from " + tableName + "where " + where;
-            return sqlHelper.Query<T>(sql);
+
+            return sqlHelper.QueryAll<T>().Where<T>(wherelamda);
+
+
         }
         /// <summary>
         /// 根据条件查询统计数量
@@ -72,7 +74,9 @@ namespace CSM.Models
         /// <returns></returns>
         public int? count<T>(string where) where T : class
         {
-            sql = "select count(*) from " + tableName + "where " + where;
+            if (!string.IsNullOrEmpty(where))
+                where = " and " + where;
+            sql = "select count(*) from " + tableName + "where 1=1 " + where;
             return sqlHelper.QueryScalar<int>(sql);
         }
         /// <summary>
