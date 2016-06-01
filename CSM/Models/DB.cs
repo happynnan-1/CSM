@@ -51,6 +51,7 @@ namespace CSM.Models
         public virtual IEnumerable<T> find<T>(string key) where T : class
         {
             sql = string.Format("select * from " + tableName + "where GUID = @guid", key);
+            //测试
             return sqlHelper.Query<T>(sql);
         }
         /// <summary>
