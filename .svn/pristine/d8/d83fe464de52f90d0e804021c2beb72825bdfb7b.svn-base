@@ -8,10 +8,9 @@ namespace CSM.Models
 {
     public class DB
     {
-        private static string database = "DB";
-        private SqlClient sqlHelper = new SqlClient(database);
+        private SqlClient sqlHelper = new SqlClient("DB");
         public string tableName { get; set; }
-        private string sql = "";
+        private string sql="";
         public string primarykey { get; set; }
         private DB(string vtableName)
         {
@@ -23,11 +22,10 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-
-        public virtual IEnumerable<T> all<T>() where T : class
+        public virtual IEnumerable<T> all<T>(string where?=null) where T : class
         {
-            //sql = "select * from " + tableName;
-            return sqlHelper.QueryAll<T>(true);
+            sql = "select * from " + tableName + "where " + where;
+            return sqlHelper.Query<T>(sql);
         }
         /// <summary>
         /// 根据主键条件查询单个实体
@@ -37,7 +35,7 @@ namespace CSM.Models
         /// <returns></returns>
         public virtual IEnumerable<T> find<T>(string key) where T : class
         {
-            sql = string.Format("select * from " + tableName + "where GUID = @guid", key);
+            sql = "select * from " + tableName + "key " + where;
             return sqlHelper.Query<T>(sql);
         }
         /// <summary>
@@ -57,10 +55,10 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public int? count<T>(string where) where T : class
+        public virtual IEnumerable<T>count<T>(string where) where T : class
         {
-            sql = "select count(*) from " + tableName + "where " + where;
-            return sqlHelper.QueryScalar<int>(sql);
+            sql = "select * from " + tableName + "where " + where;
+            return sqlHelper.Query<T>(sql);
         }
         /// <summary>
         /// 增加一个实体
@@ -68,13 +66,10 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public virtual dynamic add<T>(T entity) where T : class
+        public virtual IEnumerable<T> add<T>(string where) where T : class
         {
-
-            return sqlHelper.Add<T>(entity);
-
-            //sql = "select * from " + tableName + "where " + where;
-            //return sqlHelper.Query<T>(sql);
+            sql = "select * from " + tableName + "where " + where;
+            return sqlHelper.Query<T>(sql);
         }
         /// <summary>
         /// 更新一个实体
@@ -82,10 +77,10 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public bool update<T>(T whereEntity) where T : class
+        public virtual IEnumerable<T> update<T>(string where) where T : class
         {
-            return sqlHelper.Update<T>(whereEntity);
-
+            sql = "select * from " + tableName + "where " + where;
+            return sqlHelper.Query<T>(sql);
         }
         /// <summary>
         /// 删除一个实体
@@ -93,36 +88,11 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public bool delete<T>(T whereEntity) where T : class
+        public virtual IEnumerable<T> delete<T>(string where) where T : class
         {
-
-            return sqlHelper.Delete<T>(whereEntity);
+            sql = "select * from " + tableName + "where " + where;
+            return sqlHelper.Query<T>(sql);
         }
-
-        /// <summary>
-        /// 批量删除数据
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="whereEntity"></param>
-        public void deleteList<T>(Func<T, bool> whereEntity) where T : class
-        {
-
-            var list = sqlHelper.QueryAll<T>().Where(whereEntity);
-
-            using (var tran = new Transaction(database))
-            {
-                foreach (var l in list)
-                {
-                    sqlHelper.Delete<T>(l);
-                }
-                tran.Complete();
-            }
-            //whereEntity();
-        }
-
-
-
-
         /// <summary>
         /// 执行一段语句
         /// </summary>
@@ -133,32 +103,8 @@ namespace CSM.Models
         {
             sql = "select * from " + tableName + "where " + where;
             return sqlHelper.Query<T>(sql);
-
-
-            // deleteList<TestEntity>(i => i.Id == "1" && i.Id =="2" );
         }
 
-        public bool deletest(TestEntity t)
-        {
-            List<TestEntity> LL = new List<TestEntity>();
-
-            t = new TestEntity();
-            t.Id = "2";
-            t.Name = "2";
-            t.Age = 12;
-            LL.Add(t);
-            return true;
-        }
-
-        public class TestEntity
-        {
-            [Key(KeyType.Assigned)]
-            public string Id { get; set; }
-            [Column("Name")]
-            public string Name { get; set; }
-            [Ignore]
-            public int Age { get; set; }
-        }
 
     }
 }
