@@ -56,7 +56,7 @@ namespace CSM.Models
         /// <summary>
         /// 根据where条件查询实体集合
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">类型文件</typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
         public virtual IEnumerable<T> Search<T>(Func<T, bool> wherelamda) where T : class
