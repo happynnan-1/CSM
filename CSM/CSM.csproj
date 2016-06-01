@@ -117,6 +117,12 @@
     <Compile Include="Models\EntityList.cs" />
     <Compile Include="Models\Demo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UIDemo\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -133,6 +139,78 @@
     <Content Include="js\jquery-weui.min.js" />
     <Content Include="js\swiper.js" />
     <Content Include="js\swiper.min.js" />
+    <Content Include="UIDemo\CreateRepair.html" />
+    <Content Include="UIDemo\css\csm.css" />
+    <Content Include="UIDemo\css\jquery-weui.css" />
+    <Content Include="UIDemo\css\jquery-weui.min.css" />
+    <Content Include="UIDemo\demos\action-sheet.html" />
+    <Content Include="UIDemo\demos\article.html" />
+    <Content Include="UIDemo\demos\buttons.html" />
+    <Content Include="UIDemo\demos\calendar.html" />
+    <Content Include="UIDemo\demos\cell.html" />
+    <Content Include="UIDemo\demos\city-picker.html" />
+    <Content Include="UIDemo\demos\cols.html" />
+    <Content Include="UIDemo\demos\css\demos.css" />
+    <Content Include="UIDemo\demos\datetime-picker.html" />
+    <Content Include="UIDemo\demos\dialog.html" />
+    <Content Include="UIDemo\demos\form.html" />
+    <Content Include="UIDemo\demos\icons.html" />
+    <Content Include="UIDemo\demos\images\icon_nav_actionSheet.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_article.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_button.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_calendar.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_cell.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_city.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_datetime.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_dialog.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_icons.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_msg.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_noti.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_panel.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_photo.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_picker.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_progress.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_ptr.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_search_bar.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_select.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_swiper.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_tab.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_toast.png" />
+    <Content Include="UIDemo\demos\images\icon_nav_up.png" />
+    <Content Include="UIDemo\demos\images\pic_article.png" />
+    <Content Include="UIDemo\demos\images\present.png" />
+    <Content Include="UIDemo\demos\images\swiper-1.jpg" />
+    <Content Include="UIDemo\demos\images\swiper-2.jpg" />
+    <Content Include="UIDemo\demos\images\swiper-3.jpg" />
+    <Content Include="UIDemo\demos\images\swiper-4.jpg" />
+    <Content Include="UIDemo\demos\images\vcode.jpg" />
+    <Content Include="UIDemo\demos\index.html" />
+    <Content Include="UIDemo\demos\infinite.html" />
+    <Content Include="UIDemo\demos\msg.html" />
+    <Content Include="UIDemo\demos\noti.html" />
+    <Content Include="UIDemo\demos\panel.html" />
+    <Content Include="UIDemo\demos\photo-browser.html" />
+    <Content Include="UIDemo\demos\picker.html" />
+    <Content Include="UIDemo\demos\progress.html" />
+    <Content Include="UIDemo\demos\ptr.html" />
+    <Content Include="UIDemo\demos\searchbar.html" />
+    <Content Include="UIDemo\demos\select.html" />
+    <Content Include="UIDemo\demos\swiper.html" />
+    <Content Include="UIDemo\demos\tabbar.html" />
+    <Content Include="UIDemo\demos\toast.html" />
+    <Content Include="UIDemo\js\city-picker.js" />
+    <Content Include="UIDemo\js\city-picker.min.js" />
+    <Content Include="UIDemo\js\jquery-weui.js" />
+    <Content Include="UIDemo\js\jquery-weui.min.js" />
+    <Content Include="UIDemo\js\swiper.js" />
+    <Content Include="UIDemo\js\swiper.min.js" />
+    <Content Include="UIDemo\lib\jquery-2.1.4.js" />
+    <Content Include="UIDemo\lib\weui.css" />
+    <Content Include="UIDemo\lib\weui.min.css" />
+    <Content Include="UIDemo\ng-repeat.html" />
+    <Content Include="UIDemo\QueryProduct.html" />
+    <Content Include="UIDemo\ServiceTime.html" />
+    <Content Include="UIDemo\ViewTask.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -166,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
