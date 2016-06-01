@@ -24,7 +24,7 @@ namespace CSM.Models
         /// <param name="where"></param>
         /// <returns></returns>
 
-        public virtual IEnumerable<T> all<T>() where T : class
+        public virtual IEnumerable<T> all<T>() where T : class   
         {
             //sql = "select * from " + tableName;
             return sqlHelper.QueryAll<T>(true);
