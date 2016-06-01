@@ -1,0 +1,45 @@
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.demos-title {
+  text-align: center;
+  font-size: 20px;
+  color: #3cc51f;
+  font-weight: 700;
+  margin: 0 15%;
+}
+
+.demos-sub-title {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.demos-header {
+  padding: 25px 0;
+}
+
+.demos-content-padded {
+  padding: 15px;
+}
+
+.demos-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+.cms-footer
+{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.csm-single-cell
+{
+  border-top: solid 1px #CECECE;
+  border-bottom: solid 1px #CECECE;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

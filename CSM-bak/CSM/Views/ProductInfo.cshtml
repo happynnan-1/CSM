@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "ProductInfo";
+}
+@model CSM.Class.EntityList
+<h2>ProductInfo</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                产品名称
+            </th>
+            <th>
+                产品编号
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.plist)
+        {
+            <tr>
+                <td>
+                    @item.id
+            </td>
+            <td>
+                @item.name
+        </td>
+    </tr>
+        }
+    </tbody>
+</table>
