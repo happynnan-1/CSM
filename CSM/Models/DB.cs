@@ -30,6 +30,19 @@ namespace CSM.Models
             return sqlHelper.QueryAll<T>(true);
         }
         /// <summary>
+        /// 分页
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="pagesize"></param>
+        /// <param name="pagecount"></param>
+        /// <returns></returns>
+        public virtual IEnumerable<T> QueryByPage<T>(int pagesize, int pagecount) where T : class
+        {
+            sql = string.Format("select * from " + tableName);
+            return sqlHelper.QueryByPage<T>(sql, pagesize, pagecount);
+
+        }
+        /// <summary>
         /// 根据主键条件查询单个实体
         /// </summary>
         /// <typeparam name="T"></typeparam>
