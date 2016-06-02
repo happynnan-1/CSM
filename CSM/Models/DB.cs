@@ -20,7 +20,7 @@ namespace CSM.Models
         /// <summary>
         /// 查询所有的实体
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">实体</typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
 
