@@ -15,7 +15,7 @@ namespace CSM.Models
         public string primarykey { get; set; }
 
         public DB()
-        {            
+        {
         }
         public DB(string vtableName)
         {

@@ -15,8 +15,8 @@ namespace CSM
 
             routes.MapRoute(
                 name: "GZ",
-                url: "GZ/{action}/{id}",
-                defaults: new { controller = "WXGZ", action = "InputSN", id = UrlParameter.Optional }
+                url: "GZ/{action}/{para}",
+                defaults: new { controller = "WXGZ", action = "InputSN", para=""}
             );
            // routes.MapRoute(
            //    name: "QY",

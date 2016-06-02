@@ -15,8 +15,19 @@ namespace CSM.Controllers.GZ
         {
             return View();
         }
-        public ActionResult TaskInfor()
+        public ActionResult CreateTask(string para)
         {
+            ViewData["sn"]=para;
+            return View();
+        }
+        public ActionResult ProductInfo(string para)
+        {
+            ViewData["sn"] = para;
+            return View();
+        }
+        public ActionResult ProductMnt(string para)
+        {
+            ViewData["sn"] = para;
             return View();
         }
 
