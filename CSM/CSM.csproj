@@ -109,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DemoController.cs" />
-    <Compile Include="Controllers\QY\ViewTaskController.cs" />
+    <Compile Include="Controllers\QY\QYController.cs" />
     <Compile Include="Filters\WXOAuth.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -226,7 +226,6 @@
     <Folder Include="Controllers\GZ\" />
     <Folder Include="Images\" />
     <Folder Include="Views\GZ\" />
-    <Folder Include="Views\QY\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -249,6 +248,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Views\QY\IndexTask.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
