@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\QY\ViewTaskController.cs" />
     <Compile Include="Filters\WXOAuth.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -223,7 +224,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\API\" />
     <Folder Include="Controllers\GZ\" />
-    <Folder Include="Controllers\QY\" />
     <Folder Include="Images\" />
     <Folder Include="Views\GZ\" />
     <Folder Include="Views\QY\" />
