@@ -33,7 +33,7 @@ namespace CSM.Models
         /// 分页
         /// </summary>
         /// <typeparam name="T">类型</typeparam>
-        /// <param name="pagesize"> </param>
+        /// <param name="pagesize"></param>
         /// <param name="pagecount"></param>
         /// <returns></returns>
         public virtual IEnumerable<T> QueryByPage<T>(int pagesize, int pagecount) where T : class
