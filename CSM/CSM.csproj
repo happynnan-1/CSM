@@ -249,8 +249,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="项目文档\炘知惠客服系统\炘知惠客服数据库模型.pdf" />
-    <Content Include="项目文档\炘知惠客服系统\炘知惠客服流程图.pdf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
