@@ -13,7 +13,11 @@ namespace CSM.Models
         public string tableName { get; set; }
         private string sql = "";
         public string primarykey { get; set; }
-        private DB(string vtableName)
+
+        public DB()
+        {            
+        }
+        public DB(string vtableName)
         {
             tableName = vtableName;
         }

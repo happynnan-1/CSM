@@ -114,6 +114,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerEntity.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\EntityList.cs" />
     <Compile Include="Models\Demo.cs" />
@@ -238,6 +239,18 @@
     <ProjectReference Include="..\DataAccess.SqlClient\DataAccess.SqlClient.csproj">
       <Project>{dc28d058-aada-4f46-9bf1-2aa8d4945fb7}</Project>
       <Name>DataAccess.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin.MP\Senparc.Weixin.MP.csproj">
+      <Project>{1d815fbf-451c-4e23-939c-cb80172f445c}</Project>
+      <Name>Senparc.Weixin.MP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin.QY\Senparc.Weixin.QY.csproj">
+      <Project>{2ca35598-f1a1-4dc9-aa20-a4346bfcb954}</Project>
+      <Name>Senparc.Weixin.QY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin\Senparc.Weixin.csproj">
+      <Project>{814092cd-9cd0-4fb7-91e8-d147f476f1fb}</Project>
+      <Name>Senparc.Weixin</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
