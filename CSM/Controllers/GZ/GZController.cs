@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace CSM.Controllers.GZ
 {
-    public class WXGZController : Controller
+    public class GZController : Controller
     {
         //
         // GET: /WXGZ/

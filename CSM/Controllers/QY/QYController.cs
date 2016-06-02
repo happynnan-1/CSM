@@ -17,11 +17,11 @@ namespace CSM.Controllers.QY
             return View();
         }
 
-        private IEnumerable<Models.customer> ShowList()
+        private IEnumerable<Models.Customer> ShowList()
         {
             Models.DB mdb = new Models.DB();
 
-            return mdb.all<Models.customer>();
+            return mdb.all<Models.Customer>();
         }
 
 

@@ -16,18 +16,18 @@ namespace CSM
             routes.MapRoute(
                 name: "GZ",
                 url: "GZ/{action}/{para}",
-                defaults: new { controller = "WXGZ", action = "InputSN", para=""}
+                defaults: new { controller = "GZ", action = "InputSN", para=""}
             );
-           // routes.MapRoute(
-           //    name: "QY",
-           //    url: "QY/{controller}/{action}/{id}",
-           //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-           //);
-           // routes.MapRoute(
-           //    name: "API",
-           //    url: "API/{controller}/{action}/{id}",
-           //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-           //);
+            routes.MapRoute(
+               name: "QY",
+               url: "QY/{action}/{para}",
+               defaults: new { controller = "QY", action = "", para = "" }
+           );
+            routes.MapRoute(
+              name: "API",
+              url: "API/{action}/{para}",
+              defaults: new { controller = "API", action = "", para = "" }
+          );
         }
     }
 }

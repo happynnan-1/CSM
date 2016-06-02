@@ -109,13 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DemoController.cs" />
-    <Compile Include="Controllers\GZ\WXGZController.cs" />
+    <Compile Include="Controllers\GZ\GZController.cs" />
     <Compile Include="Controllers\QY\QYController.cs" />
     <Compile Include="Filters\WXOAuth.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\customer.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\EntityList.cs" />
     <Compile Include="Models\Demo.cs" />
@@ -133,6 +133,7 @@
     <Content Include="css\csm.css" />
     <Content Include="css\jquery-weui.css" />
     <Content Include="css\jquery-weui.min.css" />
+    <Content Include="Database\csm.sql" />
     <Content Include="Global.asax" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\city-picker.js" />
@@ -213,6 +214,9 @@
     <Content Include="UIDemo\QueryProduct.html" />
     <Content Include="UIDemo\ServiceTime.html" />
     <Content Include="UIDemo\ViewTask.html" />
+    <Content Include="Views\GZ\CreateTask.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -226,7 +230,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\API\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\GZ\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -249,9 +252,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Views\WXGZ\InputSN.cshtml" />
-    <Content Include="Views\WXGZ\CreateTask.cshtml" />
-    <Content Include="Views\WXGZ\TaskInfor.cshtml" />
+    <Content Include="Views\GZ\InputSN.cshtml" />
+    <Content Include="Views\GZ\TaskInfor.cshtml" />
     <Content Include="Views\QY\IndexTask.cshtml" />
   </ItemGroup>
   <PropertyGroup>
