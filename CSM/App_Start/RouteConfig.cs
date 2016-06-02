@@ -14,7 +14,7 @@ namespace CSM
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "GZ",
                 url: "GZ/{action}/{id}",
                 defaults: new { controller = "WXGZ", action = "InputSN", id = UrlParameter.Optional }
             );

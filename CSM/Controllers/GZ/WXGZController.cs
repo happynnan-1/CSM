@@ -15,6 +15,10 @@ namespace CSM.Controllers.GZ
         {
             return View();
         }
+        public ActionResult TaskInfor()
+        {
+            return View();
+        }
 
     }
 }
