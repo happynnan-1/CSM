@@ -21,7 +21,7 @@ namespace CSM.Models
         /// 查询所有的实体
         /// </summary>
         /// <typeparam name="T">实体</typeparam>
-        /// <param name="where"></param>
+        /// <param name="where">条件</param>
         /// <returns></returns>
 
         public virtual IEnumerable<T> all<T>() where T : class
