@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace CSM.Controllers.QY
 {
-    public class ViewTaskController : Controller
+    public class QYController : Controller
     {
         //
-        // GET: /ViewTask/
+        // GET: /QY/
 
-        public ActionResult Index()
+        public ActionResult IndexTask()
         {
             return View();
         }
