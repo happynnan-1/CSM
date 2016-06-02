@@ -16,5 +16,11 @@ namespace CSM.Controllers.QY
             return View();
         }
 
+
+        public ActionResult dd()
+        {
+            return View();
+        }
+
     }
 }
