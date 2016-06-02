@@ -32,7 +32,7 @@ namespace CSM.Models
         /// <summary>
         /// 分页
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">类型</typeparam>
         /// <param name="pagesize"></param>
         /// <param name="pagecount"></param>
         /// <returns></returns>
