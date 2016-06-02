@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CSM.Models;
 
 namespace CSM.Controllers.GZ
 {
@@ -17,7 +18,14 @@ namespace CSM.Controllers.GZ
         }
         public ActionResult CreateTask(string para)
         {
+            DB _db = new DB();
+            var _list = _db.exesql<dynamic>(string.Format(@"select t.`Name`,t1.StartTime,t1.EndTime from productinfo t
+                            left join productmnt t1 on t1.SN=t.SN
+                            where t.SN='{0}'", para));
+            //string x = _list.;
             ViewData["sn"]=para;
+            ViewData["list"] = _list;
+
             return View();
         }
         public ActionResult ProductInfo(string para)

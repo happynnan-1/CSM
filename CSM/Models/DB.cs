@@ -150,13 +150,9 @@ namespace CSM.Models
         /// <typeparam name="T"></typeparam>
         /// <param name="where"></param>
         /// <returns></returns>
-        public virtual IEnumerable<T> exesql<T>(string where) where T : class
+        public virtual IEnumerable<T> exesql<T>(string sql) where T : class
         {
-            sql = "select * from " + tableName + "where " + where;
             return sqlHelper.Query<T>(sql);
-
-
-            // deleteList<TestEntity>(i => i.Id == "1" && i.Id =="2" );
         }
 
         public bool deletest(TestEntity t)
