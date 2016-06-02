@@ -109,12 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\GZ\WXGZController.cs" />
     <Compile Include="Controllers\QY\QYController.cs" />
     <Compile Include="Filters\WXOAuth.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomerEntity.cs" />
+    <Compile Include="Models\customer.cs" />
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\EntityList.cs" />
     <Compile Include="Models\Demo.cs" />
@@ -224,7 +225,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\API\" />
-    <Folder Include="Controllers\GZ\" />
     <Folder Include="Images\" />
     <Folder Include="Views\GZ\" />
   </ItemGroup>
@@ -262,6 +262,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Views\QY\IndexTask.cshtml" />
+    <Content Include="Views\WXGZ\InputSN.cshtml" />
+    <Content Include="Views\WXGZ\TaskInfor.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
