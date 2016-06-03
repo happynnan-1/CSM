@@ -2,25 +2,26 @@
     ViewBag.Title = "产品报修";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
+@model CSM.Models.TemProduct
 <header class='demos-header'>
     <h1 class="demos-title">产品报修</h1>
 </header>
 <section>
     <div class="weui_cells_title">产品信息</div>
     <div class="weui_cells weui_cells_access">
-        <a class="weui_cell" href="~/GZ/ProductInfo/@ViewData["sn"]">
-            <div class="weui_cell_hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+        <a class="weui_cell" href="~/GZ/ProductInfo/@ViewData["ProductID"]">
+            <div class="weui_cell_hd"><img src="~/Images/icon/device.png" style="width:20px;margin-right:5px;display:block"></div>
             <div class="weui_cell_bd weui_cell_primary">
                 <p>产品名称</p>
             </div>
-            <div class="weui_cell_ft">DELL电脑E4420</div>
+            <div class="weui_cell_ft">@Model.Name</div>
         </a>
-        <a class="weui_cell" href="~/GZ/ProductInfo/@ViewData["sn"]">
-            <div class=" weui_cell_hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+        <a class="weui_cell" href="~/GZ/ProductMnt/@ViewData["ProductID"]">
+            <div class=" weui_cell_hd"><img src="~/Images/icon/time.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
             <div class="weui_cell_bd weui_cell_primary">
                 <p>过保日期</p>
             </div>
-            <div class="weui_cell_ft">2019年5月29日</div>
+            <div class="weui_cell_ft">@string.Format("{0:D}", Model.EndTime)</div>
         </a>
     </div>
 </section>
@@ -65,15 +66,15 @@
                         </div>
                         <div class="weui_uploader_bd">
                             <ul class="weui_uploader_files">
-                                <li class="weui_uploader_file" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
-                                <li class="weui_uploader_file" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
-                                <li class="weui_uploader_file" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
-                                <li class="weui_uploader_file weui_uploader_status" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <li class="weui_uploader_file" style="background-image:url(/Images/upload/pic.jpg)"></li>
+                                <li class="weui_uploader_file" style="background-image: url(/Images/upload/pic.jpg)"></li>
+                                <li class="weui_uploader_file" style="background-image: url(/Images/upload/pic.jpg)"></li>
+                                <li class="weui_uploader_file weui_uploader_status" style="background-image: url(/Images/upload/pic.jpg)">
                                     <div class="weui_uploader_status_content">
                                         <i class="weui_icon_warn"></i>
                                     </div>
                                 </li>
-                                <li class="weui_uploader_file weui_uploader_status" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <li class="weui_uploader_file weui_uploader_status" style="background-image: url(/Images/upload/pic.jpg); ">
                                     <div class="weui_uploader_status_content">50%</div>
                                 </li>
                             </ul>
@@ -95,10 +96,11 @@
 <script src="~/js/angular.min.js"></script>
 <script>
     var wxapp = angular.module('wxapp', []);
-    wxapp.controller('wxctrl', function ($scope) {
+    wxapp.controller('wxctrl', function ($scope, $http) {
         $scope.Create = function ()
         {
-            alert($scope.ProductInfo);
+            $http.post("~/GZ/AddTask", $scope.ProductInfo)
+            .success(function (response) { $scope.names = response.records; });
         }
     });
 </script>

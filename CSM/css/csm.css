@@ -1,6 +1,8 @@
 body, html {
   height: 100%;
   -webkit-tap-highlight-color: transparent;
+   background-color:#fbf9fe;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .demos-title {
   text-align: center;

@@ -9,6 +9,6 @@ namespace CSM.Models
     {
         public string Name { get; set; }
         public string StartTime { get; set; }
-        public string EndTime { get; set; }
+        public DateTime EndTime { get; set; }
     }
 }

@@ -18,16 +18,14 @@ namespace CSM.Controllers.GZ
         }
         public ActionResult CreateTask(string para)
         {
+            string _productid = para;
+            ViewData["ProductID"] = _productid;
             DB _db = new DB();
             List<TemProduct> _list = _db.exesql<TemProduct>(string.Format(@"select t.`Name`,t1.StartTime,t1.EndTime from productinfo t
-                            left join productmnt t1 on t1.SN=t.SN
-                            where t.SN='{0}'", para)).ToList();
-            string _name = _list[0].Name;
-            //string x = _list.;
-            ViewData["sn"]=para;
-            ViewData["list"] = _list;
-
-            return View();
+                                    left join productmnt t1 on t1.ProductID=t.ProductID
+                                    where t.ProductID='{0}'", para)).ToList();
+            TemProduct _temp = _list[0];
+            return View("",_temp);
         }
         public ActionResult ProductInfo(string para)
         {
@@ -38,6 +36,11 @@ namespace CSM.Controllers.GZ
         {
             ViewData["sn"] = para;
             return View();
+        }
+        public ActionResult AddTask()
+        {
+
+            return "1";
         }
 
     }
