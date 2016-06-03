@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace CSM.Controllers.QY
 {
@@ -59,6 +60,27 @@ namespace CSM.Controllers.QY
             bool flag =  mdb.update<Models.TaskAssign>(result);
 
             return RedirectToAction("Taskinfor");
+        }
+
+        /// <summary>
+        /// 返回JSON
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetData()
+        {
+            Models.DB mdb = new Models.DB();
+
+            var result = mdb.all<Models.Customer>();
+
+            var res = new JsonResult();
+
+            res.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+
+            res.Data = result;
+
+            return res;
+            
+
         }
 
         private void showWeixinUserList()
