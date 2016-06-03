@@ -59,7 +59,12 @@ namespace CSM.Controllers.QY
            
             bool flag =  mdb.update<Models.TaskAssign>(result);
 
-            return RedirectToAction("Taskinfor");
+            return RedirectToAction("ServiceTime");
+        }
+
+        public ActionResult ServiceTime()
+        {
+            return View();
         }
 
         /// <summary>

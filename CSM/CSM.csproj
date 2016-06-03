@@ -262,7 +262,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Views\GZ\InputSN.cshtml" />
-    <Content Include="Views\QY\IndexTask.cshtml" />
+    <Content Include="Views\QY\Taskinfor.cshtml" />
+    <Content Include="Views\QY\ServiceTime.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

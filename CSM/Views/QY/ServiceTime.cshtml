@@ -1,6 +1,58 @@
 ﻿@{
-    ViewBag.Title = "ServiceTime";
+    ViewBag.Title = "服务时间";
+    Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<h2>ServiceTime</h2>
-    
+
+<header class='demos-header'>
+    <h1 class="demos-title">工单更新</h1>
+</header>
+<section></section>
+<div class="weui_cells weui_cells_radio">
+    <label class="weui_cell weui_check_label" for="x11">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>预约时间</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" class="weui_check" name="radio1" id="x11">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="x12">
+
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>完成关闭</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+</div>
+<div>
+    <session>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label for="" class="weui_label">时间</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="datetime-local" value="" placeholder="">
+                </div>
+            </div>
+        </div>
+    </session>
+    <section>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <textarea class="weui_textarea" placeholder="请输入工单处理情况" rows="3"></textarea>
+                    <div class="weui_textarea_counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="cms-footer">
+    <a href="CreateRepair.html" class="weui_btn weui_btn_primary">提交</a>
+</section>
+
+<script src="~/js/angular.min.js"></script>
