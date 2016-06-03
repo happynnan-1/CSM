@@ -1,7 +1,10 @@
-﻿@{
-    ViewBag.Title = "IndexTask";
+﻿@model IEnumerable<CSM.Models.ViewModelTaskInfo>
+@{
+    ViewBag.Title = "查看订单任务";
+    Layout = "~/Views/Shared/_layout.cshtml";
+    
 }
-<html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,44 +22,54 @@
         <h1 class="demos-title">查看任务单</h1>
     </header>
     <section>
+
+
         <div class="weui_cells_title">带说明的列表项</div>
         <div class="weui_cells">
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>任务单号</p>
+
+           @if (Model.Count()>0) 
+           {
+               
+            foreach (var task in Model)
+            {
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>任务单号</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.TaskID</div>
                 </div>
-                <div class="weui_cell_ft">T20160530001</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>报修产品</p>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>报修产品</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.ProductName</div>
                 </div>
-                <div class="weui_cell_ft">Dell电脑E2301</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>报修人</p>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>报修人</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.CustomerName</div>
                 </div>
-                <div class="weui_cell_ft">郭传甲</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>报修描述</p>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>报修描述</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.Remark</div>
                 </div>
-                <div class="weui_cell_ft">启动不了</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>联系电话</p>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>联系电话</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.Phone</div>
                 </div>
-                <div class="weui_cell_ft">18662244013</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>标题文字</p>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>标题文字</p>
+                    </div>
+                    <div class="weui_cell_ft">@task.Content</div>
                 </div>
-                <div class="weui_cell_ft">说明文字</div>
-            </div>
+            }
+            }
         </div>
     </section>
 

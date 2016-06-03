@@ -11,28 +11,20 @@ namespace CSM.Models
         public ViewModelTaskInfo()
         { }
 
-        #region Model
-        private string _guid;
+        #region Model       
+
+
         private string _taskid;
         private string _customerName;
         private string _productName;
-        private string _channel;
+
         private string _content;
-        private string _level;
-        private string _adress;
-        private string _contactname;
-        private string _phone;
-        private string _email;
-        private DateTime? _createtime;
+
+       
+        private string _phone;       
         private string _remark;
-        /// <summary>
-        /// 
-        /// </summary>
-        public string GUID
-        {
-            set { _guid = value; }
-            get { return _guid; }
-        }
+  
+  
         /// <summary>
         /// 
         /// </summary>
@@ -60,42 +52,11 @@ namespace CSM.Models
         /// <summary>
         /// 
         /// </summary>
-        public string Channel
-        {
-            set { _channel = value; }
-            get { return _channel; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
+              
         public string Content
         {
-            set { _content = value; }
             get { return _content; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Level
-        {
-            set { _level = value; }
-            get { return _level; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Adress
-        {
-            set { _adress = value; }
-            get { return _adress; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string ContactName
-        {
-            set { _contactname = value; }
-            get { return _contactname; }
+            set { _content = value; }
         }
         /// <summary>
         /// 
@@ -104,23 +65,7 @@ namespace CSM.Models
         {
             set { _phone = value; }
             get { return _phone; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Email
-        {
-            set { _email = value; }
-            get { return _email; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime? CreateTime
-        {
-            set { _createtime = value; }
-            get { return _createtime; }
-        }
+        }       
         /// <summary>
         /// 
         /// </summary>
@@ -129,6 +74,16 @@ namespace CSM.Models
             set { _remark = value; }
             get { return _remark; }
         }
+
+         //TaskID = a.TaskID,
+         //                    ProductName = b.Name,                           
+         //                    CustomerName = c.NickName,
+         //                    Remark = a.Remark,
+         //                    Phone = a.Phone,
+         //                    Content = a.Content,
+
+
+
         #endregion Model
     }
 }
