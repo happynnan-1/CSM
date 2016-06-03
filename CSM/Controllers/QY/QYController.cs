@@ -22,12 +22,12 @@ namespace CSM.Controllers.QY
 
             var result = from a in taskList
                          join b in mdb.all<Models.Productinfo>() on a.ProductID.Trim() equals b.ProductID.Trim()
-                         join c in mdb.all<Models.Customer>() on a.CustomerID.Trim() equals c.GUID.Trim()
+                         join c in mdb.Search<Models.TaskAssign>(j=>j.TaskStatus == "0") on a.TaskID.Trim() equals c.TaskID.Trim()
                          select new Models.ViewModelTaskInfo
                          {
                              TaskID = a.TaskID,
                              ProductName = b.Name,                           
-                             CustomerName = c.NickName,
+                             CustomerName = a.ContactName,
                              Remark = a.Remark,
                              Phone = a.Phone,
                              Content = a.Content,
@@ -44,6 +44,11 @@ namespace CSM.Controllers.QY
             return mdb.all<Models.Customer>();
         }
 
+
+        public void ChangeService()
+        {
+
+        }
 
         private void showWeixinUserList()
         {

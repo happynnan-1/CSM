@@ -124,6 +124,7 @@
     <Compile Include="Models\EntityList.cs" />
     <Compile Include="Models\Demo.cs" />
     <Compile Include="Models\Productinfo.cs" />
+    <Compile Include="Models\TaskAssign.cs" />
     <Compile Include="Models\TaskInfo.cs" />
     <Compile Include="Models\TemProduct.cs" />
     <Compile Include="Models\ViewModelTaskInfo.cs" />
