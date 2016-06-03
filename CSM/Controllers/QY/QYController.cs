@@ -11,7 +11,7 @@ namespace CSM.Controllers.QY
         //
         // GET: /QY/
 
-         public ActionResult IndexTask(string guid)
+        public ActionResult Taskinfor(string guid)
         {
             Models.DB mdb = new Models.DB();
 
@@ -31,10 +31,10 @@ namespace CSM.Controllers.QY
                              Remark = a.Remark,
                              Phone = a.Phone,
                              Content = a.Content,
-
+                             AssignID = c.AssignID
                          };
-          
-            return View("IndexTask",result);
+
+            return View("Taskinfor", result);
         }
 
         private IEnumerable<Models.Customer> ShowList()
@@ -45,9 +45,20 @@ namespace CSM.Controllers.QY
         }
 
 
-        public void ChangeService()
+        public ActionResult ChangeService(string AssignID)
         {
+            Models.DB mdb = new Models.DB();
 
+
+            var searchTa = mdb.Search<Models.TaskAssign>(i => i.AssignID == AssignID);
+
+            var result = searchTa.FirstOrDefault<Models.TaskAssign>();
+            if(result!=null)
+                    result.TaskStatus = "2";
+           
+            bool flag =  mdb.update<Models.TaskAssign>(result);
+
+            return RedirectToAction("Taskinfor");
         }
 
         private void showWeixinUserList()

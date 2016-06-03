@@ -108,6 +108,10 @@ namespace CSM.Models
             return sqlHelper.Update<T>(whereEntity);
 
         }
+
+        
+       
+
         /// <summary>
         /// 删除一个实体
         /// </summary>

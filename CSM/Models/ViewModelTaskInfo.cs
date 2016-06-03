@@ -23,8 +23,18 @@ namespace CSM.Models
        
         private string _phone;       
         private string _remark;
-  
-  
+
+        private string _assignID;
+
+        public string AssignID
+        {
+            get { return _assignID; }
+            set { _assignID = value; }
+        }
+
+      
+
+
         /// <summary>
         /// 
         /// </summary>
