@@ -17,7 +17,7 @@ namespace CSM.Controllers.QY
             Models.DB mdb = new Models.DB();
 
             //任务单号
-            var taskList = mdb.Search<Models.TaskInfo>(i => i.TaskID.Trim() == strTaskId);
+            var taskList = mdb.Search<Models.TaskInfo>(i => i.TaskID.Trim() == strTaskId);    
 
            // var taskList = mdb.all<Models.TaskInfo>();
 
