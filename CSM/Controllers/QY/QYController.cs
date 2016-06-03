@@ -47,7 +47,7 @@ namespace CSM.Controllers.QY
 
         private void showWeixinUserList()
         {
-            
+            string str = string.Empty;
         }
 
         public ActionResult dd()
